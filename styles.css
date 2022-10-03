@@ -186,6 +186,8 @@
   @media (max-width: 28.75em) {
     html {
       font-size: 55%;
+    }
+    .welcome-section {
       text-align: center;
     }
   }
