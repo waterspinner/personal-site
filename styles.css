@@ -1,0 +1,190 @@
+/*Global Variables*/
+:root {
+    --background-red: #bf083f;
+    --background-blue: #2d99f7;
+  }
+  
+  /* Base reset 
+  WILL MAKE ALL DIVS STRETCH THE PAGE!!!
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* box-sizing and font sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  
+  
+  /*Custom font sizing
+  default 1rem = 16px, 100%=16px
+  10px/16px=.62
+  62.5% = 10PX, 10px = 1rem
+  */
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body
+  {
+   font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  /* navbar */
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: var(--background-red);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: fixed;
+    box-shadow: 0px 5px 10px black;
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    color: white;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-list a:hover {
+    border-radius: 2rem;
+    color: white;
+     transform: translateY(8px);
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .welcome-section {
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+    color: white;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  }
+  
+  .welcome-section p {
+    font-weight: lighter;
+    color: var(--background-red);
+    font-style: italic;
+  }
+  
+  .projects-section {
+   text-align: center;
+    padding: 10rem 2rem ;
+    box-shadow: 0px -8px 10px black;
+    background-color: var(--background-blue);
+  }
+  
+  /* "Automagic" image grid using no media queries */
+  .projects-grid {
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .project {
+    text-align: center;
+    background: gray;
+    border-radius: 0.5rem;
+  }
+  
+  .project-image {
+    height: calc(100% - 6rem);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  
+  .project-title {
+    padding: 1.8rem 0.5rem; /* 18px 5px */
+  }
+  
+  .arrow {
+    color: gray;
+    transition: color 0.3s ease-out;
+  }
+  
+  .project:hover .arrow {
+    color: white;
+  }
+  /* Some media queries to set font size at different screen sizes. */
+  
+  /* I am using the em unit for breakpoints
+   * The calculation is the following
+   * screen size divided by browser base font size
+   * As an example: a breakpoint at 980px
+   * 980px / 16px = 61.25em
+  */
+  
+  
+  /* 1200px / 16px = 61.25em */
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
