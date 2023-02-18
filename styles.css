@@ -1,7 +1,7 @@
 /*Global Variables*/
 :root {
     --background-red: #bf083f;
-    --background-blue: #2d99f7;
+    --background-blue: #F00A4F;
   }
   
   /* Base reset 
@@ -94,7 +94,7 @@
     justify-content: center;
     height: 100vh;
     /*background: black;*/
-    color: white;
+    color: var(--background-red);
     /*background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);*/
   }
   
@@ -102,12 +102,12 @@
     font-weight: lighter;
     color: var(--background-red);
     font-style: italic;
-    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    /* text-shadow: 6px 6px 0px rgba(0,0,0,0.2); */
   }
   
   .projects-section {
    text-align: center;
-    padding: 10rem 2rem ;
+   padding: 10rem 2rem ; 
     background-color: var(--background-blue);
   }
   
